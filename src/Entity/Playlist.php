@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Interface\Constante;
 use App\Repository\PlaylistRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -25,7 +26,7 @@ class Playlist
     /**
      * @var Collection<int, Formation>
      */
-    #[ORM\OneToMany(targetEntity: Formation::class, mappedBy: 'playlist')]
+    #[ORM\OneToMany(targetEntity: Formation::class, mappedBy: Constante::PLAYLIST)]
     private Collection $formations;
 
     public function __construct()
@@ -82,16 +83,14 @@ class Playlist
 
     public function removeFormation(Formation $formation): static
     {
-        if ($this->formations->removeElement($formation)) {
+        if ($this->formations->removeElement($formation) && $formation->getPlaylist() === $this) {
             // set the owning side to null (unless already changed)
-            if ($formation->getPlaylist() === $this) {
-                $formation->setPlaylist(null);
-            }
+            $formation->setPlaylist(null);
         }
 
         return $this;
     }
-    
+
     /**
      * @return Collection<int, string>
      */
@@ -100,12 +99,14 @@ class Playlist
         $categories = new ArrayCollection();
         foreach($this->formations as $formation){
             $categoriesFormation = $formation->getCategories();
-            foreach($categoriesFormation as $categorieFormation)
-            if(!$categories->contains($categorieFormation->getName())){
-                $categories[] = $categorieFormation->getName();
+            foreach($categoriesFormation as $categorieFormation){
+                if(!$categories->contains($categorieFormation->getName())){
+                    $categories[] = $categorieFormation->getName();
+                }
             }
+
         }
         return $categories;
     }
-        
+
 }

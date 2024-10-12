@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Playlist;
+use App\Interface\Constante;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -27,22 +28,22 @@ class PlaylistRepository extends ServiceEntityRepository
         $this->getEntityManager()->remove($entity);
         $this->getEntityManager()->flush();
     }
-    
+
     /**
      * Retourne toutes les playlists triées sur le nom de la playlist
      * @param type $champ
-     * @param type $ordre
+     * @param string $ordre
      * @return Playlist[]
      */
     public function findAllOrderByName($ordre): array{
-        return $this->createQueryBuilder('p')
-                ->leftjoin('p.formations', 'f')
+        return $this->createQueryBuilder(Constante::P)
+                ->leftjoin('p.formations', Constante::F)
                 ->groupBy('p.id')
                 ->orderBy('p.name', $ordre)
                 ->getQuery()
-                ->getResult();       
-    } 
-	
+                ->getResult();
+    }
+
     /**
      * Enregistrements dont un champ contient une valeur
      * ou tous les enregistrements si la valeur est vide
@@ -53,28 +54,28 @@ class PlaylistRepository extends ServiceEntityRepository
      */
     public function findByContainValue($champ, $valeur, $table=""): array{
         if($valeur==""){
-            return $this->findAllOrderByName('ASC');
-        }    
-        if($table==""){      
-            return $this->createQueryBuilder('p')
-                    ->leftjoin('p.formations', 'f')
+            return $this->findAllOrderByName(Constante::ASC);
+        }
+        if($table==""){
+            return $this->createQueryBuilder(Constante::P)
+                    ->leftjoin('p.formations', Constante::F)
                     ->where('p.'.$champ.' LIKE :valeur')
-                    ->setParameter('valeur', '%'.$valeur.'%')
+                    ->setParameter(Constante::VALEUR, '%'.$valeur.'%')
                     ->groupBy('p.id')
-                    ->orderBy('p.name', 'ASC')
+                    ->orderBy('p.name', Constante::ASC)
                     ->getQuery()
-                    ->getResult();              
-        }else{   
-            return $this->createQueryBuilder('p')
-                    ->leftjoin('p.formations', 'f')
-                    ->leftjoin('f.categories', 'c')
+                    ->getResult();
+        }else{
+            return $this->createQueryBuilder(Constante::P)
+                    ->leftjoin('p.formations', Constante::F)
+                    ->leftjoin('f.categories', Constante::C)
                     ->where('c.'.$champ.' LIKE :valeur')
-                    ->setParameter('valeur', '%'.$valeur.'%')
+                    ->setParameter(Constante::VALEUR, '%'.$valeur.'%')
                     ->groupBy('p.id')
-                    ->orderBy('p.name', 'ASC')
+                    ->orderBy('p.name', Constante::ASC)
                     ->getQuery()
-                    ->getResult();              
-        }           
-    }    
-    
+                    ->getResult();
+        }
+    }
+
 }

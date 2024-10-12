@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Interface\Constante;
 use App\Repository\FormationRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -15,8 +16,8 @@ class Formation
     /**
      * Début de chemin vers les images
      */
-    private const cheminImage = "https://i.ytimg.com/vi/";
-        
+    private const CHEMINIMAGE = "https://i.ytimg.com/vi/";
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -34,7 +35,7 @@ class Formation
     #[ORM\Column(length: 20, nullable: true)]
     private ?string $videoId = null;
 
-    #[ORM\ManyToOne(inversedBy: 'formations')]
+    #[ORM\ManyToOne(inversedBy: Constante::FORMATIONS)]
     private ?Playlist $playlist = null;
 
     /**
@@ -69,9 +70,9 @@ class Formation
         if($this->publishedAt == null){
             return "";
         }
-        return $this->publishedAt->format('d/m/Y');     
-    }      
-    
+        return $this->publishedAt->format('d/m/Y');
+    }
+
     public function getTitle(): ?string
     {
         return $this->title;
@@ -110,14 +111,14 @@ class Formation
 
     public function getMiniature(): ?string
     {
-        return self::cheminImage.$this->videoId."/default.jpg";
+        return self::CHEMINIMAGE.$this->videoId."/default.jpg";
     }
 
     public function getPicture(): ?string
     {
-        return self::cheminImage.$this->videoId."/hqdefault.jpg";
+        return self::CHEMINIMAGE.$this->videoId."/hqdefault.jpg";
     }
-    
+
     public function getPlaylist(): ?playlist
     {
         return $this->playlist;

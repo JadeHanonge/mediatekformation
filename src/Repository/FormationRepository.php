@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Formation;
+use App\Interface\Constante;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -31,22 +32,22 @@ class FormationRepository extends ServiceEntityRepository
     /**
      * Retourne toutes les formations triées sur un champ
      * @param type $champ
-     * @param type $ordre
+     * @param string $ordre
      * @param type $table si $champ dans une autre table
      * @return Formation[]
      */
     public function findAllOrderBy($champ, $ordre, $table=""): array{
         if($table==""){
-            return $this->createQueryBuilder('f')
+            return $this->createQueryBuilder(Constante::F)
                     ->orderBy('f.'.$champ, $ordre)
                     ->getQuery()
                     ->getResult();
         }else{
-            return $this->createQueryBuilder('f')
-                    ->join('f.'.$table, 't')
+            return $this->createQueryBuilder(Constante::F)
+                    ->join('f.'.$table, Constante::T)
                     ->orderBy('t.'.$champ, $ordre)
                     ->getQuery()
-                    ->getResult();            
+                    ->getResult();
         }
     }
 
@@ -63,49 +64,49 @@ class FormationRepository extends ServiceEntityRepository
             return $this->findAll();
         }
         if($table==""){
-            return $this->createQueryBuilder('f')
+            return $this->createQueryBuilder(Constante::F)
                     ->where('f.'.$champ.' LIKE :valeur')
-                    ->orderBy('f.publishedAt', 'DESC')
-                    ->setParameter('valeur', '%'.$valeur.'%')
+                    ->orderBy('f.publishedAt', Constante::DESC)
+                    ->setParameter(Constante::VALEUR, '%'.$valeur.'%')
                     ->getQuery()
-                    ->getResult();            
+                    ->getResult();
         }else{
-            return $this->createQueryBuilder('f')
-                    ->join('f.'.$table, 't')                    
+            return $this->createQueryBuilder(Constante::F)
+                    ->join('f.'.$table, Constante::T)
                     ->where('t.'.$champ.' LIKE :valeur')
-                    ->orderBy('f.publishedAt', 'DESC')
-                    ->setParameter('valeur', '%'.$valeur.'%')
+                    ->orderBy('f.publishedAt', Constante::DESC)
+                    ->setParameter(Constante::VALEUR, '%'.$valeur.'%')
                     ->getQuery()
-                    ->getResult();                   
-        }       
-    }    
-    
+                    ->getResult();
+        }
+    }
+
     /**
      * Retourne les n formations les plus récentes
-     * @param type $nb
+     * @param int $nb
      * @return Formation[]
      */
     public function findAllLasted($nb) : array {
-        return $this->createQueryBuilder('f')
-                ->orderBy('f.publishedAt', 'DESC')
-                ->setMaxResults($nb)     
+        return $this->createQueryBuilder(Constante::F)
+                ->orderBy('f.publishedAt', Constante::DESC)
+                ->setMaxResults($nb)
                 ->getQuery()
                 ->getResult();
-    }    
-    
+    }
+
     /**
      * Retourne la liste des formations d'une playlist
      * @param type $idPlaylist
      * @return array
      */
     public function findAllForOnePlaylist($idPlaylist): array{
-        return $this->createQueryBuilder('f')
-                ->join('f.playlist', 'p')
+        return $this->createQueryBuilder(Constante::F)
+                ->join('f.playlist', Constante::P)
                 ->where('p.id=:id')
-                ->setParameter('id', $idPlaylist)
-                ->orderBy('f.publishedAt', 'ASC')   
+                ->setParameter(Constante::ID, $idPlaylist)
+                ->orderBy('f.publishedAt', Constante::ASC)
                 ->getQuery()
-                ->getResult();        
+                ->getResult();
     }
-    
+
 }

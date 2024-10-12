@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Interface\Constante;
 use App\Repository\CategorieRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -21,7 +22,7 @@ class Categorie
     /**
      * @var Collection<int, Formation>
      */
-    #[ORM\ManyToMany(targetEntity: Formation::class, mappedBy: 'categories')]
+    #[ORM\ManyToMany(targetEntity: Formation::class, mappedBy: Constante::CATEGORIES)]
     private Collection $formations;
 
     public function __construct()
