@@ -16,6 +16,11 @@
                         </div>
                     </form>
                 </th>
+                <th class="text-left align-top">
+                    Nombre de formations<br />
+                    <a href="{{ path('playlists.sort', {champ:'formations', ordre:'ASC'}) }}" class="btn btn-info btn-sm active" role="button" aria-pressed="true"><</a>
+                    <a href="{{ path('playlists.sort', {champ:'formations', ordre:'DESC'}) }}" class="btn btn-info btn-sm active" role="button" aria-pressed="true">></a>
+                </th>
                 <th class="text-left align-top" scope="col">
                     categories
                     <form class="form-inline mt-1" method="POST" action="{{ path('playlists.findallcontain', {champ:'id', table:'categories'}) }}">
@@ -46,6 +51,9 @@
                             <h5 class="text-info">
                                 {{ playlists[k].name }}
                             </h5>
+                        </td>
+                        <td>
+                            {{ playlists[k].formations|length}}
                         </td>
                         <td class="text-left">
                             {% set categories = playlists[k].categoriesplaylist %}
