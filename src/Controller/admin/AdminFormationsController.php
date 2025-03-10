@@ -2,12 +2,15 @@
 
 namespace App\Controller\admin;
 
+use App\Entity\Formation;
 use App\Form\FormationType;
 use App\Repository\FormationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use App\Interface\Constante;
+use App\Repository\CategorieRepository;
 
 class AdminFormationsController extends AbstractController {
     /**
@@ -15,11 +18,19 @@ class AdminFormationsController extends AbstractController {
  */
 private $repository;
 
+
+/**
+ *
+ * @var CategorieRepository
+ */
+    private $categorieRepository;
+
 /**
  * @param FormationRepository $repository
  */
-public function __construct(FormationRepository $repository){
+public function __construct(FormationRepository $repository, CategorieRepository $categorieRepository){
     $this->repository = $repository;
+    $this->categorieRepository= $categorieRepository;
 }
 
 #[Route('/admin', name: 'admin.formations')]
@@ -50,6 +61,45 @@ public function edit(int $id, Request $request): Response {
     return $this->render("admin/admin.formation.edit.html.twig", [
         'formation' => $formation,
         'formformation' => $formFormation->createView()
+    ]);
+}
+
+#[Route('/admin/ajout', name: 'admin.formation.ajout')]
+public function ajout(Request $request): Response {
+    $formation = new Formation();
+    $formFormation = $this->createForm(FormationType::class, $formation);
+
+    $formFormation->handleRequest($request);
+    if($formFormation->isSubmitted() && $formFormation->isValid()){
+        $this->repository->add($formation);
+        return $this->redirectToRoute('admin.formations');
+    }
+    return $this->render("admin/admin.formation.ajout.html.twig", [
+        'formation' => $formation,
+        'formformation' => $formFormation->createView()
+    ]);
+}
+
+#[Route('/admin/formations/tri/{champ}/{ordre}/{table}', name: 'admin.formations.sort')]
+public function sortAdmin($champ, $ordre, $table=""): Response{
+    $formations = $this->repository->findAllOrderBy($champ, $ordre, $table);
+    $categories = $this->categorieRepository->findAll();
+    return $this->render(Constante::PAGE_FORMATIONS_ADMIN, [
+        Constante::FORMATIONS => $formations,
+        Constante::CATEGORIES => $categories
+    ]);
+}
+
+#[Route('/admin/formations/recherche/{champ}/{table}', name: 'admin.formations.findallcontain')]
+public function findAllContainAdmin($champ, Request $request, $table=""): Response{
+    $valeur = $request->get("recherche");
+    $formations = $this->repository->findByContainValue($champ, $valeur, $table);
+    $categories = $this->categorieRepository->findAll();
+    return $this->render(Constante::PAGE_FORMATIONS_ADMIN, [
+        Constante::FORMATIONS => $formations,
+        Constante::CATEGORIES => $categories,
+        Constante::VALEUR => $valeur,
+        Constante::TABLE => $table
     ]);
 }
 

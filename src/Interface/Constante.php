@@ -6,6 +6,7 @@ interface Constante
 {
     public const PAGE_FORMATIONS = "pages/formations.html.twig";
     public const PAGE_FORMATION = "pages/formation.html.twig";
+    public const PAGE_FORMATIONS_ADMIN = "admin/admin.formations.html.twig";
     public const PAGE_PLAYLISTS = "pages/playlists.html.twig";
     public const PAGE_PLAYLIST = "pages/playlist.html.twig";
     public const PAGE_ACCUEIL = "pages/accueil.html.twig";

@@ -7,29 +7,43 @@ use App\Entity\Formation;
 use App\Entity\Playlist;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\LessThanOrEqual;
+
 
 class FormationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('publishedAt', null, [
+            ->add('publishedAt', DateType::class, [
                 'widget' => 'single_text',
-                'label' => 'Publier le '
+                'label' => 'Publier le ',
+                'input' => 'datetime',
+                'constraints' => [
+                    new LessThanOrEqual([
+                'value' => 'today',
+                'message' => 'La date ne peut pas être postérieure à aujourd\'hui.',
+            ]),
+        ],
             ])
             ->add('title', null, [
-                'label' => 'Titre'
+                'label' => 'Titre',
+                'required' => true
             ])
             ->add('description')
             ->add('videoId', null, [
-                'label' => 'Video ID'
+                'label' => 'Video ID',
+                'required' => true
             ])
             ->add('playlist', EntityType::class, [
                 'class' => Playlist::class,
                 'choice_label' => 'id',
+                'placeholder' => 'Sélectionnez une playlist',
+                'required' => true
             ])
             ->add('categories', EntityType::class, [
                 'class' => Categorie::class,
@@ -37,7 +51,8 @@ class FormationType extends AbstractType
                 'multiple' => true,
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Envoyer'
+                'label' => 'Envoyer',
+
             ])
         ;
     }
