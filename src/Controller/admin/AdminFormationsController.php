@@ -36,19 +36,21 @@ public function __construct(FormationRepository $repository, CategorieRepository
 #[Route('/admin', name: 'admin.formations')]
 public function index(): Response {
     $formations = $this->repository->findAllOrderBy('title', 'ASC');
+    $categories = $this->categorieRepository->findAll();
     return $this->render("admin/admin.formations.html.twig", [
-        'formations' => $formations
+        'formations' => $formations,
+        'categories' => $categories
     ]);
 }
 
-#[Route('/admin/suppr/{id}', name: 'admin.formation.suppr')]
+#[Route('/admin/formations/suppr/{id}', name: 'admin.formation.suppr')]
 public function suppr(int $id): Response {
     $formation = $this->repository->find($id);
     $this->repository->remove($formation);
     return $this->redirectToRoute('admin.formations');
 }
 
-#[Route('/admin/edit/{id}', name: 'admin.formation.edit')]
+#[Route('/admin/formations/edit/{id}', name: 'admin.formation.edit')]
 public function edit(int $id, Request $request): Response {
     $formation = $this->repository->find($id);
     $formFormation = $this->createForm(FormationType::class, $formation);
@@ -64,7 +66,7 @@ public function edit(int $id, Request $request): Response {
     ]);
 }
 
-#[Route('/admin/ajout', name: 'admin.formation.ajout')]
+#[Route('/admin/formations/ajout', name: 'admin.formation.ajout')]
 public function ajout(Request $request): Response {
     $formation = new Formation();
     $formFormation = $this->createForm(FormationType::class, $formation);

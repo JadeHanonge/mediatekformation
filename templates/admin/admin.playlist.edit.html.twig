@@ -1,0 +1,9 @@
+{% extends "adminbasefront.html.twig" %}
+
+{% block body %}
+    <h2>Nouvelle playlist :</h2>
+    {{ include ("_admin.playlist.form.html.twig") }}
+    {% for formation in playlistformations %}
+        {{formation.title}}&nbsp;
+    {% endfor %}
+{% endblock %}

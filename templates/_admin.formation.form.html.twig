@@ -1,20 +1,20 @@
 {{ form_start(formformation) }}
-     <div class="row">
-            <div class="col">
-                <div class="row">
-                    <div class="col-auto">
-                        {{ form_row(formformation.title) }}
-                    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col-auto">
+                    {{ form_row(formformation.title) }}
                 </div>
-                {{ form_row(formformation.publishedAt) }}
-                {{ form_row(formformation.videoId) }}
-                {{ form_row(formformation.playlist) }}
-                {{ form_row(formformation.categories) }}
             </div>
+            {{ form_row(formformation.publishedAt) }}
+            {{ form_row(formformation.videoId) }}
+            {{ form_row(formformation.playlist) }}
+            {{ form_row(formformation.categories) }}
         </div>
-        <div class="row">
-            <div class="col">
-                {{ form_row(formformation.description) }}
-            </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_row(formformation.description) }}
         </div>
-    {{ form_end(formformation) }}
+    </div>
+{{ form_end(formformation) }}

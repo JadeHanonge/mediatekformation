@@ -41,13 +41,13 @@ class FormationType extends AbstractType
             ])
             ->add('playlist', EntityType::class, [
                 'class' => Playlist::class,
-                'choice_label' => 'id',
+                'choice_label' => 'name',
                 'placeholder' => 'Sélectionnez une playlist',
                 'required' => true
             ])
             ->add('categories', EntityType::class, [
                 'class' => Categorie::class,
-                'choice_label' => 'id',
+                'choice_label' => 'name',
                 'multiple' => true,
             ])
             ->add('submit', SubmitType::class, [
