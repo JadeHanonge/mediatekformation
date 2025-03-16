@@ -108,22 +108,4 @@ class FormationRepository extends ServiceEntityRepository
                 ->getQuery()
                 ->getResult();
     }
-
-       /**
-     * Retourne la liste des formations d'une categorie
-     * @param type $idCategorie
-     * @return array
-     */
-    public function findAllForOneCategorie($idCategorie): array{
-        return $this->createQueryBuilder(Constante::F)
-                ->join('f.categorie', Constante::C)
-                ->where('c.id=:id')
-                ->setParameter(Constante::ID, $idCategorie)
-                ->orderBy('f.publishedAt', Constante::ASC)
-                ->getQuery()
-                ->getResult();
-    }
-
-
-
 }
