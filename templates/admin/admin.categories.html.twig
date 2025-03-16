@@ -1,0 +1,58 @@
+{% extends "adminbasefront.html.twig" %}
+
+{% block body %}
+    <table class="table-striped">
+        <thead>
+            <tr>
+                <th class="text-left align-top" scope="col">
+                    categories
+                    <form class="form-inline mt-1" method="POST" action="{{ path('admin.categories.findallcontain', {champ:'id', table:'categories'}) }}">
+                        <select class="form-select form-select-sm" name="recherche" id="recherche" onchange="this.form.submit()">
+                            <option value=""></option>
+                            {% for categorie in categories %}
+                                <option
+                                    {% if valeur|default and valeur==categorie.id %}
+                                        selected
+                                    {% endif %}
+                                    value="{{ categorie.id }}">{{ categorie.name }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        <thead>
+        <tbody>
+            {% for categorie in categories %}
+                <tr>
+                    <td>
+                        {{categorie.name}}
+                    </td>
+                    <td>
+                        <a href="{{ path('admin.categorie.suppr', {id:categorie.id})}}" class="btn btn-danger" onclick="return confirm('Etes-vous sur de vouloir supprimer {{categorie.name}} ?')">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            <h2>Nouvelle caégorie</h2>
+            {% for message in app.flashes('notice') %}
+                <div class="flash-notice"> {{ message }} </div>
+            {% endfor %}
+            {{ form_start(formcategorie)}}
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-auto">
+                                {{ form_row(formcategorie.name) }}
+                            </div>
+                        </div>
+                        {{ form_row(formcategorie.formations) }}
+                    </div>
+                </div>
+        {{ form_end(formcategorie) }}
+        </tbody>
+    </table>
+
+{% endblock %}

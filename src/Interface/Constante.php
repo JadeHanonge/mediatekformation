@@ -10,6 +10,7 @@ interface Constante
     public const PAGE_PLAYLISTS = "pages/playlists.html.twig";
     public const PAGE_PLAYLIST = "pages/playlist.html.twig";
     public const PAGE_PLAYLISTS_ADMIN = "admin/admin.playlists.html.twig";
+    public const PAGE_CATEGORIES_ADMIN = "admin/admin.categories.html.twig";
     public const PAGE_ACCUEIL = "pages/accueil.html.twig";
     public const PAGE_CGU = "pages/cgu.html.twig";
     public const FORMATIONS = "formations";
