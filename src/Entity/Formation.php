@@ -29,6 +29,7 @@ class Formation
      * @Assert\NotNull(message="La date de publication est obligatoire.")
      * @Assert\LessThanOrEqual("today", message="La date ne peut pas être postérieure à aujourd'hui.")
      */
+    #[Assert\LessThanOrEqual("today")]
     private ?\DateTimeInterface $publishedAt = null;
 
     #[ORM\Column(length: 100, nullable: true)]
