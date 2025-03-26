@@ -7,6 +7,11 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
+/**
+ * Controleur des Login
+ *
+ * @author jade
+ */
 class LoginController extends AbstractController
 {
     #[Route('/login', name: 'app_login')]

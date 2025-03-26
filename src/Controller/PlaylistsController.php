@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Description of PlaylistsController
  *
- * @author emds
+ * @author jade
  */
 class PlaylistsController extends AbstractController {
 

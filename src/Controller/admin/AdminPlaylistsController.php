@@ -15,9 +15,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBag;
 
 /**
- * Description of PlaylistsController
+ * Description of PlaylistsController en admin
  *
- * @author emds
+ * @author jade
  */
 class AdminPlaylistsController extends AbstractController {
 

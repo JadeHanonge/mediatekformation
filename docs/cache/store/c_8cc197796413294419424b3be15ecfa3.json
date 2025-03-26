@@ -1,0 +1,303 @@
+{
+    "name": "App\\Repository\\PlaylistRepository",
+    "line": 13,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "extends": [
+            [
+                "\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository<\\App\\Entity\\Playlist>"
+            ]
+        ]
+    },
+    "namespace": "App\\Repository",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Repository\/PlaylistRepository.php",
+    "relative_file": "\/src\/Repository\/PlaylistRepository.php",
+    "hash": "76d4107b2c0332668da76bf78bac2f2ff6f2f463",
+    "parent": "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Playlist": "App\\Entity\\Playlist",
+        "Constante": "App\\Interface\\Constante",
+        "ServiceEntityRepository": "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+        "ManagerRegistry": "Doctrine\\Persistence\\ManagerRegistry"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 15,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "registry": {
+                    "name": "registry",
+                    "line": 15,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Doctrine\\Persistence\\ManagerRegistry",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "add": {
+            "name": "add",
+            "line": 20,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "entity": {
+                    "name": "entity",
+                    "line": 20,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Entity\\Playlist",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "remove": {
+            "name": "remove",
+            "line": 26,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "entity": {
+                    "name": "entity",
+                    "line": 26,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Entity\\Playlist",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "findAllOrderByName": {
+            "name": "findAllOrderByName",
+            "line": 38,
+            "short_desc": "Retourne toutes les playlists tri\u00e9es sur le nom de la playlist",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [
+                "The method \"findAllOrderByName\" has \"2\" @param tags but only \"1\" where expected."
+            ],
+            "parameters": {
+                "ordre": {
+                    "name": "ordre",
+                    "line": 38,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "findAllOrderByFormations": {
+            "name": "findAllOrderByFormations",
+            "line": 52,
+            "short_desc": "Retourne toutes les playlists tri\u00e9es sur le nombres de formations de la playlist",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "ordre": {
+                    "name": "ordre",
+                    "line": 52,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "findByContainValue": {
+            "name": "findByContainValue",
+            "line": 69,
+            "short_desc": "Enregistrements dont un champ contient une valeur\nou tous les enregistrements si la valeur est vide",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "champ": {
+                    "name": "champ",
+                    "line": 69,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Repository\\type",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "valeur": {
+                    "name": "valeur",
+                    "line": 69,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Repository\\type",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "table": {
+                    "name": "table",
+                    "line": 69,
+                    "short_desc": "si $champ dans une autre table",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Repository\\type",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

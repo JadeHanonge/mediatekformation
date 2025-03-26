@@ -1,0 +1,225 @@
+{
+    "name": "App\\Interface\\Constante",
+    "line": 5,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "App\\Interface",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Interface\/Constante.php",
+    "relative_file": "\/src\/Interface\/Constante.php",
+    "hash": "756ba9c3f65a8ea5e39e0499bd8abfbcf1c24b1d",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": true,
+    "is_read_only": false,
+    "aliases": [],
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": {
+        "PAGE_FORMATIONS": {
+            "name": "PAGE_FORMATIONS",
+            "line": 7,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PAGE_FORMATION": {
+            "name": "PAGE_FORMATION",
+            "line": 8,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PAGE_FORMATIONS_ADMIN": {
+            "name": "PAGE_FORMATIONS_ADMIN",
+            "line": 9,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PAGE_PLAYLISTS": {
+            "name": "PAGE_PLAYLISTS",
+            "line": 10,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PAGE_PLAYLIST": {
+            "name": "PAGE_PLAYLIST",
+            "line": 11,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PAGE_PLAYLISTS_ADMIN": {
+            "name": "PAGE_PLAYLISTS_ADMIN",
+            "line": 12,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PAGE_CATEGORIES_ADMIN": {
+            "name": "PAGE_CATEGORIES_ADMIN",
+            "line": 13,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PAGE_ACCUEIL": {
+            "name": "PAGE_ACCUEIL",
+            "line": 14,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PAGE_CGU": {
+            "name": "PAGE_CGU",
+            "line": 15,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "FORMATIONS": {
+            "name": "FORMATIONS",
+            "line": 16,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "FORMATION": {
+            "name": "FORMATION",
+            "line": 17,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "CATEGORIES": {
+            "name": "CATEGORIES",
+            "line": 18,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "VALEUR": {
+            "name": "VALEUR",
+            "line": 19,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "TABLE": {
+            "name": "TABLE",
+            "line": 20,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PLAYLISTS": {
+            "name": "PLAYLISTS",
+            "line": 21,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PLAYLIST": {
+            "name": "PLAYLIST",
+            "line": 22,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PLAYLIST_CATEGORIES": {
+            "name": "PLAYLIST_CATEGORIES",
+            "line": 23,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "PLAYLIST_FORMATIONS": {
+            "name": "PLAYLIST_FORMATIONS",
+            "line": 24,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "C": {
+            "name": "C",
+            "line": 25,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "F": {
+            "name": "F",
+            "line": 26,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "P": {
+            "name": "P",
+            "line": 27,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "T": {
+            "name": "T",
+            "line": 28,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "ASC": {
+            "name": "ASC",
+            "line": 29,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "DESC": {
+            "name": "DESC",
+            "line": 30,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        },
+        "ID": {
+            "name": "ID",
+            "line": 31,
+            "short_desc": null,
+            "long_desc": null,
+            "modifiers": 1,
+            "tags": []
+        }
+    }
+}

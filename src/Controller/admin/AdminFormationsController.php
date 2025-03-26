@@ -12,6 +12,11 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Interface\Constante;
 use App\Repository\CategorieRepository;
 
+/**
+ * Controleur des formations en admin
+ *
+ * @author jade
+ */
 class AdminFormationsController extends AbstractController {
     /**
  * @var FormationRepository

@@ -14,7 +14,13 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\LessThanOrEqual;
 
 
-class FormationType extends AbstractType
+/**
+ * Form pour ajouter/modifier une formation
+ * @param FormBuilderInterface $builder
+ * @param array $options
+ *
+ * @author jade
+ */class FormationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {

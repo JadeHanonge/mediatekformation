@@ -1,0 +1,582 @@
+{
+    "name": "App\\Entity\\Formation",
+    "line": 13,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "App\\Entity",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Entity\/Formation.php",
+    "relative_file": "\/src\/Entity\/Formation.php",
+    "hash": "3c71497222ec89afc4ef80ad9eeeaef64fed838b",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Constante": "App\\Interface\\Constante",
+        "FormationRepository": "App\\Repository\\FormationRepository",
+        "ArrayCollection": "Doctrine\\Common\\Collections\\ArrayCollection",
+        "Collection": "Doctrine\\Common\\Collections\\Collection",
+        "Types": "Doctrine\\DBAL\\Types\\Types",
+        "ORM": "Doctrine\\ORM\\Mapping",
+        "Assert": "Symfony\\Component\\Validator\\Constraints"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 63,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getId": {
+            "name": "getId",
+            "line": 68,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "int",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getPublishedAt": {
+            "name": "getPublishedAt",
+            "line": 73,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\DateTimeInterface",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setPublishedAt": {
+            "name": "setPublishedAt",
+            "line": 78,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Formation",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "publishedAt": {
+                    "name": "publishedAt",
+                    "line": 78,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "App\\Entity\\DateTimeInterface",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getPublishedAtString": {
+            "name": "getPublishedAtString",
+            "line": 85,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getTitle": {
+            "name": "getTitle",
+            "line": 92,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setTitle": {
+            "name": "setTitle",
+            "line": 97,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Formation",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "title": {
+                    "name": "title",
+                    "line": 97,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getDescription": {
+            "name": "getDescription",
+            "line": 104,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setDescription": {
+            "name": "setDescription",
+            "line": 109,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Formation",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "description": {
+                    "name": "description",
+                    "line": 109,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getVideoId": {
+            "name": "getVideoId",
+            "line": 116,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setVideoId": {
+            "name": "setVideoId",
+            "line": 121,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Formation",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "videoId": {
+                    "name": "videoId",
+                    "line": 121,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getMiniature": {
+            "name": "getMiniature",
+            "line": 128,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getPicture": {
+            "name": "getPicture",
+            "line": 133,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getPlaylist": {
+            "name": "getPlaylist",
+            "line": 138,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\App\\Entity\\playlist",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setPlaylist": {
+            "name": "setPlaylist",
+            "line": 143,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Formation",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "playlist": {
+                    "name": "playlist",
+                    "line": 143,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "App\\Entity\\App\\Entity\\Playlist",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getCategories": {
+            "name": "getCategories",
+            "line": 153,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Doctrine\\Common\\Collections\\Collection",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "addCategory": {
+            "name": "addCategory",
+            "line": 158,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Formation",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "category": {
+                    "name": "category",
+                    "line": 158,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Entity\\Categorie",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "removeCategory": {
+            "name": "removeCategory",
+            "line": 167,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Formation",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "category": {
+                    "name": "category",
+                    "line": 167,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Entity\\Categorie",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        }
+    },
+    "constants": {
+        "CHEMINIMAGE": {
+            "name": "CHEMINIMAGE",
+            "line": 20,
+            "short_desc": "D\u00e9but de chemin vers les images",
+            "long_desc": "",
+            "modifiers": 4,
+            "tags": []
+        }
+    }
+}

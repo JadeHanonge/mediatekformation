@@ -1,0 +1,187 @@
+{
+    "name": "App\\Repository\\CategorieRepository",
+    "line": 13,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "extends": [
+            [
+                "\\Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository<\\App\\Entity\\Categorie>"
+            ]
+        ]
+    },
+    "namespace": "App\\Repository",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Repository\/CategorieRepository.php",
+    "relative_file": "\/src\/Repository\/CategorieRepository.php",
+    "hash": "3b9303df999304d2d9d48d3e9c3e8d7a9f5bcdf9",
+    "parent": "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Categorie": "App\\Entity\\Categorie",
+        "Constante": "App\\Interface\\Constante",
+        "ServiceEntityRepository": "Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository",
+        "ManagerRegistry": "Doctrine\\Persistence\\ManagerRegistry"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 15,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "registry": {
+                    "name": "registry",
+                    "line": 15,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Doctrine\\Persistence\\ManagerRegistry",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "add": {
+            "name": "add",
+            "line": 20,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "entity": {
+                    "name": "entity",
+                    "line": 20,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Entity\\Categorie",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "remove": {
+            "name": "remove",
+            "line": 26,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "entity": {
+                    "name": "entity",
+                    "line": 26,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Entity\\Categorie",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "findAllForOnePlaylist": {
+            "name": "findAllForOnePlaylist",
+            "line": 37,
+            "short_desc": "Retourne la liste des cat\u00e9gories des formations d'une playlist",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "idPlaylist": {
+                    "name": "idPlaylist",
+                    "line": 37,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Repository\\type",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

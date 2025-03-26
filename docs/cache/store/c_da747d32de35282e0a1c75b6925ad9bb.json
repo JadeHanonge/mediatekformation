@@ -1,0 +1,440 @@
+{
+    "name": "App\\Controller\\admin\\AdminPlaylistsController",
+    "line": 22,
+    "short_desc": "Description of PlaylistsController en admin",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "jade"
+            ]
+        ]
+    },
+    "namespace": "App\\Controller\\admin",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Controller\/admin\/AdminPlaylistsController.php",
+    "relative_file": "\/src\/Controller\/admin\/AdminPlaylistsController.php",
+    "hash": "922c8b9da2adde9734ba0e7a962c908515f87d6f",
+    "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Playlist": "App\\Entity\\Playlist",
+        "PlaylistType": "App\\Form\\PlaylistType",
+        "Constante": "App\\Interface\\Constante",
+        "CategorieRepository": "App\\Repository\\CategorieRepository",
+        "FormationRepository": "App\\Repository\\FormationRepository",
+        "PlaylistRepository": "App\\Repository\\PlaylistRepository",
+        "AbstractController": "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+        "Request": "Symfony\\Component\\HttpFoundation\\Request",
+        "Response": "Symfony\\Component\\HttpFoundation\\Response",
+        "SessionInterface": "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+        "Route": "Symfony\\Component\\Routing\\Annotation\\Route",
+        "FlashBag": "Symfony\\Component\\HttpFoundation\\Session\\Flash\\FlashBag"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 42,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "playlistRepository": {
+                    "name": "playlistRepository",
+                    "line": 42,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Repository\\PlaylistRepository",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "categorieRepository": {
+                    "name": "categorieRepository",
+                    "line": 43,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Repository\\CategorieRepository",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "formationRespository": {
+                    "name": "formationRespository",
+                    "line": 44,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Repository\\FormationRepository",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "index": {
+            "name": "index",
+            "line": 54,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "Route": [
+                    [
+                        "(\"\/playlists\",",
+                        "name=\"playlists\")"
+                    ]
+                ]
+            },
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "sort": {
+            "name": "sort",
+            "line": 64,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "champ": {
+                    "name": "champ",
+                    "line": 65,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "ordre": {
+                    "name": "ordre",
+                    "line": 65,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "findAllContain": {
+            "name": "findAllContain",
+            "line": 81,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "champ": {
+                    "name": "champ",
+                    "line": 82,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "request": {
+                    "name": "request",
+                    "line": 82,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "table": {
+                    "name": "table",
+                    "line": 82,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": "\"\"",
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "showOne": {
+            "name": "showOne",
+            "line": 94,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 95,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": null,
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "suppr": {
+            "name": "suppr",
+            "line": 106,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 107,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "session": {
+                    "name": "session",
+                    "line": 107,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "edit": {
+            "name": "edit",
+            "line": 121,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "id": {
+                    "name": "id",
+                    "line": 122,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "int",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "request": {
+                    "name": "request",
+                    "line": 122,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "ajout": {
+            "name": "ajout",
+            "line": 139,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 140,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\HttpFoundation\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

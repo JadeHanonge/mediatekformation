@@ -14,6 +14,11 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Interface\Constante;
 use App\Repository\CategorieRepository;
 
+/**
+ * Controleur des categories en admin
+ *
+ * @author jade
+ */
 class AdminCategoriesController extends AbstractController {
     /**
  * @var FormationRepository
@@ -77,32 +82,6 @@ public function suppr(int $id): Response {
     return $this->redirectToRoute('admin.categories');
 }
 
-
-// #[Route('/admin/categories/ajout', name: 'admin.categorie.ajout')]
-// public function ajout(Request $request): Response {
-//     $categorie = new Categorie();
-//     $formCategorie = $this->createForm(CategorieType::class, $categorie);
-
-//     $formCategorie->handleRequest($request);
-//     if($formCategorie->isSubmitted() && $formCategorie->isValid()){
-//         $this->categorieRepository->add($categorie);
-//         return $this->redirectToRoute('admin.categories');
-//     }
-//     return $this->render("admin/admin.categories.html.twig", [
-//         'categorie' => $categorie,
-//         'formcategorie' => $formCategorie->createView()
-//     ]);
-// }
-
-// #[Route('/admin/formations/tri/{champ}/{ordre}/{table}', name: 'admin.formations.sort')]
-// public function sortAdmin($champ, $ordre, $table=""): Response{
-//     $formations = $this->formationrepository->findAllOrderBy($champ, $ordre, $table);
-//     $categories = $this->categorieRepository->findAll();
-//     return $this->render(Constante::PAGE_FORMATIONS_ADMIN, [
-//         Constante::FORMATIONS => $formations,
-//         Constante::CATEGORIES => $categories
-//     ]);
-// }
 
 #[Route('/admin/categories/recherche/{champ}/{table}', name: 'admin.categories.findallcontain')]
 public function findAllContainAdmin($champ, Request $request, $table=""): Response{

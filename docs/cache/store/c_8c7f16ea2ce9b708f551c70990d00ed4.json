@@ -1,0 +1,109 @@
+{
+    "name": "App\\DataFixtures\\UserFixture",
+    "line": 15,
+    "short_desc": "gestion user et password",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "jade"
+            ]
+        ]
+    },
+    "namespace": "App\\DataFixtures",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/DataFixtures\/UserFixture.php",
+    "relative_file": "\/src\/DataFixtures\/UserFixture.php",
+    "hash": "48b53b45dc6cd0dffb8de08d4e3ac1261ef8214b",
+    "parent": "Doctrine\\Bundle\\FixturesBundle\\Fixture",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "User": "App\\Entity\\User",
+        "Fixture": "Doctrine\\Bundle\\FixturesBundle\\Fixture",
+        "ObjectManager": "Doctrine\\Persistence\\ObjectManager",
+        "UserPasswordHasherInterface": "Symfony\\Component\\PasswordHasher\\Hasher\\UserPasswordHasherInterface"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 19,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "passwordHasher": {
+                    "name": "passwordHasher",
+                    "line": 19,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\PasswordHasher\\Hasher\\UserPasswordHasherInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "load": {
+            "name": "load",
+            "line": 23,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "manager": {
+                    "name": "manager",
+                    "line": 23,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Doctrine\\Persistence\\ObjectManager",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

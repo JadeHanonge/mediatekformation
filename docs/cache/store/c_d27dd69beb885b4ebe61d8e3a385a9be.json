@@ -1,0 +1,323 @@
+{
+    "name": "App\\Entity\\Playlist",
+    "line": 12,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "App\\Entity",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Entity\/Playlist.php",
+    "relative_file": "\/src\/Entity\/Playlist.php",
+    "hash": "15790790c749e94071794fad978dc340115ae27d",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Constante": "App\\Interface\\Constante",
+        "PlaylistRepository": "App\\Repository\\PlaylistRepository",
+        "ArrayCollection": "Doctrine\\Common\\Collections\\ArrayCollection",
+        "Collection": "Doctrine\\Common\\Collections\\Collection",
+        "Types": "Doctrine\\DBAL\\Types\\Types",
+        "ORM": "Doctrine\\ORM\\Mapping"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "__construct": {
+            "name": "__construct",
+            "line": 32,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getId": {
+            "name": "getId",
+            "line": 37,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "int",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getName": {
+            "name": "getName",
+            "line": 42,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setName": {
+            "name": "setName",
+            "line": 47,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Playlist",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "name": {
+                    "name": "name",
+                    "line": 47,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getDescription": {
+            "name": "getDescription",
+            "line": 54,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setDescription": {
+            "name": "setDescription",
+            "line": 59,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Playlist",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "description": {
+                    "name": "description",
+                    "line": 59,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ],
+                        [
+                            "null",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getFormations": {
+            "name": "getFormations",
+            "line": 69,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Doctrine\\Common\\Collections\\Collection",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "addFormation": {
+            "name": "addFormation",
+            "line": 74,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Playlist",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "formation": {
+                    "name": "formation",
+                    "line": 74,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Entity\\Formation",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "removeFormation": {
+            "name": "removeFormation",
+            "line": 84,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\Playlist",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "formation": {
+                    "name": "formation",
+                    "line": 84,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Entity\\Formation",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getCategoriesPlaylist": {
+            "name": "getCategoriesPlaylist",
+            "line": 97,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Doctrine\\Common\\Collections\\Collection",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

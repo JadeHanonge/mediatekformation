@@ -12,6 +12,13 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+/**
+ * Form pour ajouter/modifier une playlist
+ * @param FormBuilderInterface $builder
+ * @param array $options
+ *
+ * @author jade
+ */
 class PlaylistType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void

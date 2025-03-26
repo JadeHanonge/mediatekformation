@@ -1,0 +1,334 @@
+{
+    "name": "App\\Entity\\User",
+    "line": 10,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "App\\Entity",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Entity\/User.php",
+    "relative_file": "\/src\/Entity\/User.php",
+    "hash": "019e20c9470d9df46b4566c3719ba28f64f6f9e4",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "UserRepository": "App\\Repository\\UserRepository",
+        "ORM": "Doctrine\\ORM\\Mapping",
+        "PasswordAuthenticatedUserInterface": "Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface",
+        "UserInterface": "Symfony\\Component\\Security\\Core\\User\\UserInterface"
+    },
+    "errors": [],
+    "interfaces": {
+        "Symfony\\Component\\Security\\Core\\User\\UserInterface": "Symfony\\Component\\Security\\Core\\User\\UserInterface",
+        "Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface": "Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface"
+    },
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "getId": {
+            "name": "getId",
+            "line": 34,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "int",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getUsername": {
+            "name": "getUsername",
+            "line": 39,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setUsername": {
+            "name": "setUsername",
+            "line": 44,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\User",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "username": {
+                    "name": "username",
+                    "line": 44,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getUserIdentifier": {
+            "name": "getUserIdentifier",
+            "line": 56,
+            "short_desc": "A visual identifier that represents this user.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": {
+                "see": [
+                    [
+                        "\\Symfony\\Component\\Security\\Core\\User\\UserInterface"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "\\Symfony\\Component\\Security\\Core\\User\\UserInterface",
+                    "",
+                    "\\Symfony\\Component\\Security\\Core\\User\\UserInterface",
+                    false,
+                    false
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "getRoles": {
+            "name": "getRoles",
+            "line": 66,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": {
+                "see": [
+                    [
+                        "\\Symfony\\Component\\Security\\Core\\User\\UserInterface"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "\\Symfony\\Component\\Security\\Core\\User\\UserInterface",
+                    "",
+                    "\\Symfony\\Component\\Security\\Core\\User\\UserInterface",
+                    false,
+                    false
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setRoles": {
+            "name": "setRoles",
+            "line": 78,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "App\\Entity\\User",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "roles": {
+                    "name": "roles",
+                    "line": 78,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "getPassword": {
+            "name": "getPassword",
+            "line": 88,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": {
+                "see": [
+                    [
+                        "\\Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "\\Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface",
+                    "",
+                    "\\Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface",
+                    false,
+                    false
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "setPassword": {
+            "name": "setPassword",
+            "line": 93,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "App\\Entity\\User",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "password": {
+                    "name": "password",
+                    "line": 93,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "eraseCredentials": {
+            "name": "eraseCredentials",
+            "line": 103,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": {
+                "see": [
+                    [
+                        "\\Symfony\\Component\\Security\\Core\\User\\UserInterface"
+                    ]
+                ]
+            },
+            "see": [
+                [
+                    "\\Symfony\\Component\\Security\\Core\\User\\UserInterface",
+                    "",
+                    "\\Symfony\\Component\\Security\\Core\\User\\UserInterface",
+                    false,
+                    false
+                ]
+            ],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

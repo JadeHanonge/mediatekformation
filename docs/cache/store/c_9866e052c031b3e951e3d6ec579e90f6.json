@@ -1,0 +1,138 @@
+{
+    "name": "App\\Form\\FormationType",
+    "line": 23,
+    "short_desc": "Form pour ajouter\/modifier une formation",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "jade"
+            ]
+        ]
+    },
+    "namespace": "App\\Form",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Form\/FormationType.php",
+    "relative_file": "\/src\/Form\/FormationType.php",
+    "hash": "d357062950e8acec0078060290dca847b64377fd",
+    "parent": "Symfony\\Component\\Form\\AbstractType",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Categorie": "App\\Entity\\Categorie",
+        "Formation": "App\\Entity\\Formation",
+        "Playlist": "App\\Entity\\Playlist",
+        "EntityType": "Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType",
+        "AbstractType": "Symfony\\Component\\Form\\AbstractType",
+        "DateType": "Symfony\\Component\\Form\\Extension\\Core\\Type\\DateType",
+        "SubmitType": "Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType",
+        "FormBuilderInterface": "Symfony\\Component\\Form\\FormBuilderInterface",
+        "OptionsResolver": "Symfony\\Component\\OptionsResolver\\OptionsResolver",
+        "LessThanOrEqual": "Symfony\\Component\\Validator\\Constraints\\LessThanOrEqual"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "buildForm": {
+            "name": "buildForm",
+            "line": 25,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "builder": {
+                    "name": "builder",
+                    "line": 25,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\Form\\FormBuilderInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "options": {
+                    "name": "options",
+                    "line": 25,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "configureOptions": {
+            "name": "configureOptions",
+            "line": 66,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "resolver": {
+                    "name": "resolver",
+                    "line": 66,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\OptionsResolver\\OptionsResolver",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

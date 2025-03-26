@@ -1,0 +1,135 @@
+{
+    "name": "App\\Form\\CategorieType",
+    "line": 20,
+    "short_desc": "Form pour ajouter\/modifier une categorie",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "author": [
+            [
+                "jade"
+            ]
+        ]
+    },
+    "namespace": "App\\Form",
+    "file": "\/mnt\/c\/wamp64\/www\/mediatekformation\/src\/Form\/CategorieType.php",
+    "relative_file": "\/src\/Form\/CategorieType.php",
+    "hash": "20f02afb47e70395e67caf0fd9a69c4e0827618d",
+    "parent": "Symfony\\Component\\Form\\AbstractType",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Categorie": "App\\Entity\\Categorie",
+        "Formation": "App\\Entity\\Formation",
+        "EntityType": "Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType",
+        "AbstractType": "Symfony\\Component\\Form\\AbstractType",
+        "SubmitType": "Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType",
+        "FormBuilderInterface": "Symfony\\Component\\Form\\FormBuilderInterface",
+        "OptionsResolver": "Symfony\\Component\\OptionsResolver\\OptionsResolver"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "buildForm": {
+            "name": "buildForm",
+            "line": 22,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "builder": {
+                    "name": "builder",
+                    "line": 22,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\Form\\FormBuilderInterface",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                },
+                "options": {
+                    "name": "options",
+                    "line": 22,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "array",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        },
+        "configureOptions": {
+            "name": "configureOptions",
+            "line": 41,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "resolver": {
+                    "name": "resolver",
+                    "line": 41,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Symfony\\Component\\OptionsResolver\\OptionsResolver",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false
+                }
+            }
+        }
+    },
+    "constants": []
+}
